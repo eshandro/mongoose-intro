@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	h1 Email received
+	p Your emails is: #{email}
+	p Make any changes below:
+	form(method='post' action='/changeEmail')
+		input(type='hidden' name='oldemailId' value='#{_id}')
+		input(type='text' name='email' placeholder="Email address")
+		input(type='submit' value='SIGN UP')

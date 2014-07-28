@@ -1,0 +1,8 @@
+extends layout
+
+block content
+	h1 Wingzingly
+	p We know you are excited. Sign up now!
+	form(method="post" action="/signup")
+		input(type='text' name='email' placeholder="Email address")
+		input(type='submit' value='SIGN UP')

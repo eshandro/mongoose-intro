@@ -36,10 +36,11 @@ app.post('/changeEmail', function(req, res) {
 			if(error) {
 				res.send('There was an error changing your email address')
 			}
-			user.save()
+			else {
+				res.send('Your changed email is: ' + req.body.email)
+			}
 		});
 
-	res.send('Your changed email is: ' + req.body.email)
 });
 
 app.get('/viewusers', function(req, res) {
